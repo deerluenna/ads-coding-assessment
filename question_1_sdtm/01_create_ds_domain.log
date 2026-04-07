@@ -26,8 +26,8 @@ Unique subjects   : 306
 --- Variable Types ---
     STUDYID      DOMAIN     USUBJID       DSSEQ      DSTERM     DSDECOD       DSCAT    VISITNUM       VISIT       DSDTC     DSSTDTC      DSSTDY 
 "character" "character" "character"   "integer" "character" "character" "character"   "numeric" "character"   "iso8601"      "Date"   "integer" 
-✓ Saved: question_1_sdtm/ds_sdtm.rds
-✓ Saved: question_1_sdtm/ds_sdtm.csv
+✓ Saved: question_1_sdtm/ds.rds
+✓ Saved: question_1_sdtm/ds.csv
 
 === Script completed successfully with NO ERRORS ===
 ================================================================================

@@ -262,8 +262,8 @@ ds_final <- ds %>%
 # ------------------------------------------------------------------------------
 #  Save Outputs
 # ------------------------------------------------------------------------------
-saveRDS(ds_final, "ds_sdtm.rds")
-write.csv(ds_final, "ds_sdtm.csv", row.names = FALSE, na = "") # Make NA empty
+saveRDS(ds_final, "ds.rds")
+write.csv(ds_final, "ds.csv", row.names = FALSE, na = "") # Make NA empty
 
 
 
@@ -281,8 +281,8 @@ print(head(ds_final, 5))
 cat("\n--- Variable Types ---\n")
 print(sapply(ds_final, class))
 
-cat("✓ Saved: question_1_sdtm/ds_sdtm.rds\n")
-cat("✓ Saved: question_1_sdtm/ds_sdtm.csv\n")
+cat("✓ Saved: question_1_sdtm/ds.rds\n")
+cat("✓ Saved: question_1_sdtm/ds.csv\n")
 
 cat("\n=== Script completed successfully with NO ERRORS ===\n")
 cat("================================================================================\n")
