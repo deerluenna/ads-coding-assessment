@@ -1,0 +1,137 @@
+================================================================================
+  EXECUTION LOG: 02_create_adsl.R
+  R version     : R version 4.2.2 (2022-10-31 ucrt)
+  admiral      : 1.4.1
+  pharmaversesdtm: 1.4.1
+================================================================================
+
+
+--- QC Summary ---
+Total ADSL records  : 306 
+Unique subjects   : 306 
+
+--- Final ADSL Head ---
+# A tibble: 5 x 36
+  STUDYID     USUBJID SUBJID RFSTDTC RFENDTC RFXSTDTC RFXENDTC RFICDTC RFPENDTC DTHDTC DTHFL SITEID BRTHDTC   AGE AGEU  SEX   RACE  ETHNIC ARMCD ARM   ACTARMCD ACTARM COUNTRY DMDTC  DMDY ARMNRS ACTARMUD
+  <chr>       <chr>   <chr>  <chr>   <chr>   <chr>    <chr>    <chr>   <chr>    <chr>  <chr> <chr>  <chr>   <dbl> <chr> <chr> <chr> <chr>  <chr> <chr> <chr>    <chr>  <chr>   <chr> <dbl> <chr>  <chr>   
+1 CDISCPILOT~ 01-701~ 1015   2014-0~ 2014-0~ 2014-01~ 2014-07~ <NA>    2014-07~ <NA>   <NA>  701    1950-1~    63 YEARS F     WHITE HISPA~ Pbo   Plac~ Pbo      Place~ USA     2013~    -7 <NA>   <NA>    
+2 CDISCPILOT~ 01-701~ 1023   2012-0~ 2012-0~ 2012-08~ 2012-09~ <NA>    2013-02~ <NA>   <NA>  701    1948-0~    64 YEARS M     WHITE HISPA~ Pbo   Plac~ Pbo      Place~ USA     2012~   -14 <NA>   <NA>    
+3 CDISCPILOT~ 01-701~ 1028   2013-0~ 2014-0~ 2013-07~ 2014-01~ <NA>    2014-01~ <NA>   <NA>  701    1942-0~    71 YEARS M     WHITE NOT H~ Xan_~ Xano~ Xan_Hi   Xanom~ USA     2013~    -8 <NA>   <NA>    
+4 CDISCPILOT~ 01-701~ 1033   2014-0~ 2014-0~ 2014-03~ 2014-03~ <NA>    2014-09~ <NA>   <NA>  701    1940-0~    74 YEARS M     WHITE NOT H~ Xan_~ Xano~ Xan_Lo   Xanom~ USA     2014~    -8 <NA>   <NA>    
+5 CDISCPILOT~ 01-701~ 1034   2014-0~ 2014-1~ 2014-07~ 2014-12~ <NA>    2014-12~ <NA>   <NA>  701    1937-0~    77 YEARS F     WHITE NOT H~ Xan_~ Xano~ Xan_Hi   Xanom~ USA     2014~    -7 <NA>   <NA>    
+# i 9 more variables: AGEGR9 <chr>, AGEGR9N <dbl>, TRTSDTM <dttm>, TRTSTMF <chr>, TRTEDTM <dttm>, TRTETMF <chr>, ITTFL <chr>, TRTEDT <date>, LSTAVLDT <date>
+
+--- Variable Types ---
+$STUDYID
+[1] "character"
+
+$USUBJID
+[1] "character"
+
+$SUBJID
+[1] "character"
+
+$RFSTDTC
+[1] "character"
+
+$RFENDTC
+[1] "character"
+
+$RFXSTDTC
+[1] "character"
+
+$RFXENDTC
+[1] "character"
+
+$RFICDTC
+[1] "character"
+
+$RFPENDTC
+[1] "character"
+
+$DTHDTC
+[1] "character"
+
+$DTHFL
+[1] "character"
+
+$SITEID
+[1] "character"
+
+$BRTHDTC
+[1] "character"
+
+$AGE
+[1] "numeric"
+
+$AGEU
+[1] "character"
+
+$SEX
+[1] "character"
+
+$RACE
+[1] "character"
+
+$ETHNIC
+[1] "character"
+
+$ARMCD
+[1] "character"
+
+$ARM
+[1] "character"
+
+$ACTARMCD
+[1] "character"
+
+$ACTARM
+[1] "character"
+
+$COUNTRY
+[1] "character"
+
+$DMDTC
+[1] "character"
+
+$DMDY
+[1] "numeric"
+
+$ARMNRS
+[1] "character"
+
+$ACTARMUD
+[1] "character"
+
+$AGEGR9
+[1] "character"
+
+$AGEGR9N
+[1] "numeric"
+
+$TRTSDTM
+[1] "POSIXct" "POSIXt" 
+
+$TRTSTMF
+[1] "character"
+
+$TRTEDTM
+[1] "POSIXct" "POSIXt" 
+
+$TRTETMF
+[1] "character"
+
+$ITTFL
+[1] "character"
+
+$TRTEDT
+[1] "Date"
+
+$LSTAVLDT
+[1] "Date"
+
+✓ Saved: question_2_adam/adsl.rds
+✓ Saved: question_2_adam/adsl_.csv
+
+=== Script completed successfully with NO ERRORS ===
+================================================================================
