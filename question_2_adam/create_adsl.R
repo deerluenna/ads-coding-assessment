@@ -1,7 +1,7 @@
 # ============================================================================== 
-# Question 1. ADaM ADSL Dataset Creation using {admiral}
+# Question 2. ADaM ADSL Dataset Creation using {admiral}
 # ------------------------------------------------------------------------------
-# Program:   02_create_adsl.R
+# Program:   create_adsl.R
 # Objective: Create ADaM ADSL dataset using {admiral} and pharmaversesdtm
 # Inputs:    pharmaversesdtm::dm
 #            pharmaversesdtm::vs
@@ -10,7 +10,7 @@
 #            pharmaversesdtm::ae
 # Outputs:   adsl.csv
 #            adsl.rds
-#            02_create_adsl.log
+#            create_adsl.log
 # Author:    Luenna Wu
 # Date:      April 2026
 # ==============================================================================
@@ -19,7 +19,7 @@
 # ------------------------------------------------------------------------------
 #  Set Up Logging
 # ------------------------------------------------------------------------------
-log_file <- here("question_2_adam", "02_create_adsl.log")
+log_file <- here("question_2_adam", "create_adsl.log")
 
 # Open log connection and redirect all output and messages
 con <- file(log_file, open = "wt")
@@ -27,7 +27,7 @@ sink(con, type = "output")
 sink(con, type = "message")
 
 cat("================================================================================\n")
-cat("  EXECUTION LOG: 02_create_adsl.R\n")
+cat("  EXECUTION LOG: create_adsl.R\n")
 cat(paste0("  R version     : ", R.version.string, "\n"))
 cat(paste0("  admiral      : ", as.character(packageVersion("admiral")), "\n"))
 cat(paste0("  pharmaversesdtm: ", as.character(packageVersion("pharmaversesdtm")), "\n"))
@@ -51,7 +51,7 @@ library(pharmaversesdtm)
 #  Read in Data
 # ------------------------------------------------------------------------------
 
-# Raw DS dataset
+# SDTM datasets
 dm <- pharmaversesdtm::dm # Demographics
 vs <- pharmaversesdtm::vs # Vital signs 
 ex <- pharmaversesdtm::ex # Exposure 
@@ -230,7 +230,7 @@ cat("\n--- Variable Types ---\n")
 print(sapply(adsl_final, class))
 
 cat("✓ Saved: question_2_adam/adsl.rds\n")
-cat("✓ Saved: question_2_adam/adsl_.csv\n")
+cat("✓ Saved: question_2_adam/adsl.csv\n")
 
 cat("\n=== Script completed successfully with NO ERRORS ===\n")
 cat("================================================================================\n")
