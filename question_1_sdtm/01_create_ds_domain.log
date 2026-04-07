@@ -1,0 +1,33 @@
+================================================================================
+  EXECUTION LOG: 01_create_ds_domain.R
+  R version     : R version 4.2.2 (2022-10-31 ucrt)
+  sdtm.oak      : 0.2.0
+  pharmaverseraw: 0.1.1
+================================================================================
+
+i These terms could not be mapped per the controlled terminology: "Randomized", "Final Lab Visit", and "Final Retrieval Visit".
+i These terms could not be mapped per the controlled terminology: "Unscheduled 6.1", "Unscheduled 1.1", "Unscheduled 5.1", "Unscheduled 4.1", "Unscheduled 8.2", and "Unscheduled 13.1".
+i These terms could not be mapped per the controlled terminology: "Unscheduled 6.1", "Unscheduled 1.1", "Unscheduled 5.1", "Unscheduled 4.1", "Unscheduled 8.2", and "Unscheduled 13.1".
+
+--- QC Summary ---
+Total DS records  : 850 
+Unique subjects   : 306 
+
+--- Final DS Head ---
+# A tibble: 5 x 12
+  STUDYID      DOMAIN USUBJID     DSSEQ DSTERM             DSDECOD         DSCAT              VISITNUM VISIT    DSDTC            DSSTDTC    DSSTDY
+  <chr>        <chr>  <chr>       <int> <chr>              <chr>           <chr>                 <dbl> <chr>    <iso8601>        <date>      <int>
+1 CDISCPILOT01 DS     01-701-1015     1 FINAL LAB VISIT    FINAL LAB VISIT OTHER EVENT              13 WEEK 26  2014-07-02T11:45 2014-07-02    182
+2 CDISCPILOT01 DS     01-701-1015     2 PROTOCOL COMPLETED COMPLETED       DISPOSITION EVENT        13 WEEK 26  2014-07-02       2014-07-02    182
+3 CDISCPILOT01 DS     01-701-1015     3 RANDOMIZED         RANDOMIZED      PROTOCOL MILESTONE        3 BASELINE 2014-01-02       2014-01-02      1
+4 CDISCPILOT01 DS     01-701-1023     1 ADVERSE EVENT      ADVERSE EVENT   DISPOSITION EVENT         5 WEEK 4   2012-09-02       2012-09-02     29
+5 CDISCPILOT01 DS     01-701-1023     2 FINAL LAB VISIT    FINAL LAB VISIT OTHER EVENT               5 WEEK 4   2012-09-02T10:15 2012-09-02     29
+
+--- Variable Types ---
+    STUDYID      DOMAIN     USUBJID       DSSEQ      DSTERM     DSDECOD       DSCAT    VISITNUM       VISIT       DSDTC     DSSTDTC      DSSTDY 
+"character" "character" "character"   "integer" "character" "character" "character"   "numeric" "character"   "iso8601"      "Date"   "integer" 
+✓ Saved: question_1_sdtm/ds_sdtm.rds
+✓ Saved: question_1_sdtm/ds_sdtm.csv
+
+=== Script completed successfully with NO ERRORS ===
+================================================================================
