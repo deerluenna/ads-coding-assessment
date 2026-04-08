@@ -1,0 +1,34 @@
+================================================================================
+  EXECUTION LOG: 02_create_visualizations.R
+  R version       : R version 4.5.3 (2026-03-11 ucrt)
+  admiral         : 2.5.0
+  pharmaverseadam : 1.3.0
+  gt              : 1.3.0
+  webshot2        : 0.1.2
+================================================================================
+
+
+--- QC Summary ---
+Total TEAE records          : 1122 
+Unique subjects on study    : 306 
+Unique subjects with AE     : 225 
+Unique subjects with TEAE   : 217 
+
+--- Treatment-emergent ADAE Head ---
+# A tibble: 5 x 4
+  USUBJID     ACTARM  AETERM                    AESEV   
+  <chr>       <chr>   <chr>                     <chr>   
+1 01-701-1015 Placebo APPLICATION SITE ERYTHEMA MILD    
+2 01-701-1015 Placebo APPLICATION SITE PRURITUS MILD    
+3 01-701-1015 Placebo DIARRHOEA                 MILD    
+4 01-701-1023 Placebo ERYTHEMA                  MODERATE
+5 01-701-1023 Placebo ERYTHEMA                  MILD    
+
+--- Variable Types ---
+    USUBJID      ACTARM      AETERM       AESEV 
+"character" "character" "character" "character" 
+✓ Saved: question_3_tlg/g_ae_sev_dist.png
+✓ Saved: question_3_tlg/g_ae_freq_top10.png
+
+=== Script completed successfully with NO ERRORS ===
+================================================================================
