@@ -1,0 +1,358 @@
+================================================================================
+  EXECUTION LOG: 01_create_ae_summary_table.R
+  R version     : R version 4.5.3 (2026-03-11 ucrt)
+  admiral       : 2.5.0
+  pharmaverseadam: 1.3.0
+  gt            : 1.3.0
+  webshot2      : 0.1.2
+================================================================================
+
+
+--- QC Summary ---
+Total TEAE records  : 1122 
+Unique subjects   : 217 
+
+--- Treatment-emergent ADAE Head ---
+# A tibble: 5 x 107
+  STUDYID     USUBJID SUBJID SITEID COUNTRY DOMAIN RFSTDTC RFENDTC RFXSTDTC RFXENDTC RFPENDTC SCRFDT FRVDT      DTHDTC DTHADY DTHFL LDDTHELD LDDTHGR1 DTH30FL DTHA30FL DTHDOM DTHB30FL REGION1
+  <chr>       <chr>   <chr>  <chr>  <chr>   <chr>  <chr>   <chr>   <chr>    <chr>    <chr>    <date> <date>     <chr>   <dbl> <chr>    <dbl> <chr>    <chr>   <chr>    <chr>  <chr>    <chr>  
+1 CDISCPILOT~ 01-701~ 1015   701    USA     AE     2014-0~ 2014-0~ 2014-01~ 2014-07~ 2014-07~ NA     NA         <NA>       NA <NA>        NA <NA>     <NA>    <NA>     <NA>   <NA>     NA     
+2 CDISCPILOT~ 01-701~ 1015   701    USA     AE     2014-0~ 2014-0~ 2014-01~ 2014-07~ 2014-07~ NA     NA         <NA>       NA <NA>        NA <NA>     <NA>    <NA>     <NA>   <NA>     NA     
+3 CDISCPILOT~ 01-701~ 1015   701    USA     AE     2014-0~ 2014-0~ 2014-01~ 2014-07~ 2014-07~ NA     NA         <NA>       NA <NA>        NA <NA>     <NA>    <NA>     <NA>   <NA>     NA     
+4 CDISCPILOT~ 01-701~ 1023   701    USA     AE     2012-0~ 2012-0~ 2012-08~ 2012-09~ 2013-02~ NA     2013-02-18 <NA>       NA <NA>        NA <NA>     <NA>    <NA>     <NA>   <NA>     NA     
+5 CDISCPILOT~ 01-701~ 1023   701    USA     AE     2012-0~ 2012-0~ 2012-08~ 2012-09~ 2013-02~ NA     2013-02-18 <NA>       NA <NA>        NA <NA>     <NA>    <NA>     <NA>   <NA>     NA     
+# i 84 more variables: DMDTC <chr>, DMDY <dbl>, AGE <dbl>, AGEU <chr>, AGEGR1 <chr>, SEX <chr>, RACE <chr>, RACEGR1 <chr>, ETHNIC <chr>, SAFFL <chr>, ARM <chr>, ARMCD <chr>, ACTARM <chr>,
+#   ACTARMCD <chr>, TRT01P <chr>, TRT01A <chr>, TRTSDT <date>, TRTSDTM <dttm>, TRTSTMF <chr>, TRTEDT <date>, TRTEDTM <dttm>, TRTETMF <chr>, EOSSTT <chr>, EOSDT <date>, RFICDTC <chr>,
+#   RANDDT <date>, LSTALVDT <date>, TRTDURD <dbl>, DTHDT <date>, DTHDTF <chr>, DTHCAUS <chr>, DTHCGR1 <chr>, AESEQ <dbl>, AETERM <chr>, AEDECOD <chr>, AEBODSYS <chr>, AEBDSYCD <dbl>,
+#   AELLT <chr>, AELLTCD <dbl>, AEPTCD <dbl>, AEHLT <chr>, AEHLTCD <dbl>, AEHLGT <chr>, AEHLGTCD <dbl>, AESOC <chr>, AESOCCD <dbl>, AESTDTC <chr>, ASTDT <date>, ASTDTM <dttm>, ASTDTF <chr>,
+#   ASTTMF <chr>, AEENDTC <chr>, AENDT <date>, AENDTM <dttm>, AENDTF <chr>, AENTMF <chr>, ASTDY <dbl>, AESTDY <dbl>, AENDY <dbl>, AEENDY <dbl>, ADURN <dbl>, ADURU <chr>, TRTEMFL <chr>,
+#   AOCCIFL <chr>, AESER <chr>, AESDTH <chr>, AESLIFE <chr>, AESHOSP <chr>, AESDISAB <chr>, AESCONG <chr>, AESEV <chr>, ASEV <chr>, ASEVN <int>, AEREL <chr>, AREL <chr>, AEACN <chr>,
+#   AESPID <chr>, AEOUT <chr>, AESCAN <chr>, AESOD <chr>, AEDTC <chr>, LDOSEDTM <dttm>, DOSEON <dbl>, DOSEU <chr>
+
+--- Variable Types ---
+$STUDYID
+[1] "character"
+
+$USUBJID
+[1] "character"
+
+$SUBJID
+[1] "character"
+
+$SITEID
+[1] "character"
+
+$COUNTRY
+[1] "character"
+
+$DOMAIN
+[1] "character"
+
+$RFSTDTC
+[1] "character"
+
+$RFENDTC
+[1] "character"
+
+$RFXSTDTC
+[1] "character"
+
+$RFXENDTC
+[1] "character"
+
+$RFPENDTC
+[1] "character"
+
+$SCRFDT
+[1] "Date"
+
+$FRVDT
+[1] "Date"
+
+$DTHDTC
+[1] "character"
+
+$DTHADY
+[1] "numeric"
+
+$DTHFL
+[1] "character"
+
+$LDDTHELD
+[1] "numeric"
+
+$LDDTHGR1
+[1] "character"
+
+$DTH30FL
+[1] "character"
+
+$DTHA30FL
+[1] "character"
+
+$DTHDOM
+[1] "character"
+
+$DTHB30FL
+[1] "character"
+
+$REGION1
+[1] "character"
+
+$DMDTC
+[1] "character"
+
+$DMDY
+[1] "numeric"
+
+$AGE
+[1] "numeric"
+
+$AGEU
+[1] "character"
+
+$AGEGR1
+[1] "character"
+
+$SEX
+[1] "character"
+
+$RACE
+[1] "character"
+
+$RACEGR1
+[1] "character"
+
+$ETHNIC
+[1] "character"
+
+$SAFFL
+[1] "character"
+
+$ARM
+[1] "character"
+
+$ARMCD
+[1] "character"
+
+$ACTARM
+[1] "character"
+
+$ACTARMCD
+[1] "character"
+
+$TRT01P
+[1] "character"
+
+$TRT01A
+[1] "character"
+
+$TRTSDT
+[1] "Date"
+
+$TRTSDTM
+[1] "POSIXct" "POSIXt" 
+
+$TRTSTMF
+[1] "character"
+
+$TRTEDT
+[1] "Date"
+
+$TRTEDTM
+[1] "POSIXct" "POSIXt" 
+
+$TRTETMF
+[1] "character"
+
+$EOSSTT
+[1] "character"
+
+$EOSDT
+[1] "Date"
+
+$RFICDTC
+[1] "character"
+
+$RANDDT
+[1] "Date"
+
+$LSTALVDT
+[1] "Date"
+
+$TRTDURD
+[1] "numeric"
+
+$DTHDT
+[1] "Date"
+
+$DTHDTF
+[1] "character"
+
+$DTHCAUS
+[1] "character"
+
+$DTHCGR1
+[1] "character"
+
+$AESEQ
+[1] "numeric"
+
+$AETERM
+[1] "character"
+
+$AEDECOD
+[1] "character"
+
+$AEBODSYS
+[1] "character"
+
+$AEBDSYCD
+[1] "numeric"
+
+$AELLT
+[1] "character"
+
+$AELLTCD
+[1] "numeric"
+
+$AEPTCD
+[1] "numeric"
+
+$AEHLT
+[1] "character"
+
+$AEHLTCD
+[1] "numeric"
+
+$AEHLGT
+[1] "character"
+
+$AEHLGTCD
+[1] "numeric"
+
+$AESOC
+[1] "character"
+
+$AESOCCD
+[1] "numeric"
+
+$AESTDTC
+[1] "character"
+
+$ASTDT
+[1] "Date"
+
+$ASTDTM
+[1] "POSIXct" "POSIXt" 
+
+$ASTDTF
+[1] "character"
+
+$ASTTMF
+[1] "character"
+
+$AEENDTC
+[1] "character"
+
+$AENDT
+[1] "Date"
+
+$AENDTM
+[1] "POSIXct" "POSIXt" 
+
+$AENDTF
+[1] "character"
+
+$AENTMF
+[1] "character"
+
+$ASTDY
+[1] "numeric"
+
+$AESTDY
+[1] "numeric"
+
+$AENDY
+[1] "numeric"
+
+$AEENDY
+[1] "numeric"
+
+$ADURN
+[1] "numeric"
+
+$ADURU
+[1] "character"
+
+$TRTEMFL
+[1] "character"
+
+$AOCCIFL
+[1] "character"
+
+$AESER
+[1] "character"
+
+$AESDTH
+[1] "character"
+
+$AESLIFE
+[1] "character"
+
+$AESHOSP
+[1] "character"
+
+$AESDISAB
+[1] "character"
+
+$AESCONG
+[1] "character"
+
+$AESEV
+[1] "character"
+
+$ASEV
+[1] "character"
+
+$ASEVN
+[1] "integer"
+
+$AEREL
+[1] "character"
+
+$AREL
+[1] "character"
+
+$AEACN
+[1] "character"
+
+$AESPID
+[1] "character"
+
+$AEOUT
+[1] "character"
+
+$AESCAN
+[1] "character"
+
+$AESOD
+[1] "character"
+
+$AEDTC
+[1] "character"
+
+$LDOSEDTM
+[1] "POSIXct" "POSIXt" 
+
+$DOSEON
+[1] "numeric"
+
+$DOSEU
+[1] "character"
+
+G3;file:///C:/Users/everi/AppData/Local/Temp/RtmpWoGXS5/file1752c72361bb1.html screenshot completed
+g✓ Saved: question_3_tlg/t_ae_summary.pdf
+
+=== Script completed successfully with NO ERRORS ===
+================================================================================
