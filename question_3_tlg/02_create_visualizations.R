@@ -18,6 +18,15 @@
 
 
 # ------------------------------------------------------------------------------
+#  Load Packages
+# ------------------------------------------------------------------------------
+library(dplyr)
+library(here)
+library(ggplot2)
+library(pharmaverseadam)
+
+
+# ------------------------------------------------------------------------------
 #  Set Up Logging
 # ------------------------------------------------------------------------------
 log_file <- here("question_3_tlg", "02_create_visualizations.log")
@@ -35,16 +44,6 @@ cat(paste0("  pharmaverseadam : ", as.character(packageVersion("pharmaverseadam"
 cat(paste0("  gt              : ", as.character(packageVersion("gt")), "\n"))
 cat(paste0("  webshot2        : ", as.character(packageVersion("webshot2")), "\n"))
 cat("================================================================================\n\n")
-
-
-
-# ------------------------------------------------------------------------------
-#  Load Packages
-# ------------------------------------------------------------------------------
-library(dplyr)
-library(here)
-library(ggplot2)
-library(pharmaverseadam)
 
 
 
@@ -100,14 +99,14 @@ adae_summary <- adae_te %>%
     .groups = "drop"
   ) %>%
   mutate(
-    n_ae_pt = n_distinct(adae$USUBJID),  # Total n of patients who experienced AE
-    rate = n_teae_pt / n_ae_pt # Calculate incidence rate
+    n_pt = n_distinct(adsl$USUBJID),  # Total n of patients
+    rate = n_teae_pt / n_pt # Calculate incidence rate
   ) %>% 
   rowwise() %>%
   mutate(
     # Calculate lower and upper confidence interval
-    ci_lower = binom.test(n_teae_pt, n_ae_pt, conf.level = 0.95)$conf.int[1],
-    ci_upper  = binom.test(n_teae_pt, n_ae_pt, conf.level = 0.95)$conf.int[2],
+    ci_lower = binom.test(n_teae_pt, n_pt, conf.level = 0.95)$conf.int[1],
+    ci_upper  = binom.test(n_teae_pt, n_pt, conf.level = 0.95)$conf.int[2],
   ) %>%
   ungroup() %>%
   arrange(desc(n_teae_pt)) %>% # Arrange AEs by decreasing frequency
@@ -126,7 +125,7 @@ p2 <- ggplot(adae_summary,
     x = "Percentage of Patients (%)",
     y = "",
     title = "Top 10 Most Frequent Adverse Events (AEs)", 
-    subtitle = "n = 225 Subjects Experienced AE; 95% Clopper-Pearson CIs"
+    subtitle = "n = 306 Subjects; 95% Clopper-Pearson CIs"
   ) +
   theme_minimal() 
 

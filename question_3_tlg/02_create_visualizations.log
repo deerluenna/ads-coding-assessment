@@ -15,7 +15,7 @@ Unique subjects with AE     : 225
 Unique subjects with TEAE   : 217 
 
 --- Treatment-emergent ADAE Head ---
-# A tibble: 5 x 4
+# A tibble: 5 × 4
   USUBJID     ACTARM  AETERM                    AESEV   
   <chr>       <chr>   <chr>                     <chr>   
 1 01-701-1015 Placebo APPLICATION SITE ERYTHEMA MILD    
