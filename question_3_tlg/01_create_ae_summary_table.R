@@ -15,6 +15,18 @@
 
 
 # ------------------------------------------------------------------------------
+#  Load Packages
+# ------------------------------------------------------------------------------
+library(dplyr)
+library(here)
+library(gtsummary)
+library(pharmaverseadam)
+library(gt)
+library(webshot2)
+
+
+
+# ------------------------------------------------------------------------------
 #  Set Up Logging
 # ------------------------------------------------------------------------------
 log_file <- here("question_3_tlg", "01_create_ae_summary_table.log")
@@ -32,18 +44,6 @@ cat(paste0("  pharmaverseadam: ", as.character(packageVersion("pharmaverseadam")
 cat(paste0("  gt            : ", as.character(packageVersion("gt")), "\n"))
 cat(paste0("  webshot2      : ", as.character(packageVersion("webshot2")), "\n"))
 cat("================================================================================\n\n")
-
-
-
-# ------------------------------------------------------------------------------
-#  Load Packages
-# ------------------------------------------------------------------------------
-library(dplyr)
-library(here)
-library(gtsummary)
-library(pharmaverseadam)
-library(gt)
-library(webshot2)
 
 
 

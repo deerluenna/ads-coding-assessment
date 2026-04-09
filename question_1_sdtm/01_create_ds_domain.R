@@ -16,6 +16,18 @@
 
 
 # ------------------------------------------------------------------------------
+#  Load Packages
+# ------------------------------------------------------------------------------
+library(dplyr)
+library(stringr)
+library(lubridate)
+library(here)
+library(sdtm.oak)
+library(pharmaverseraw)
+
+
+
+# ------------------------------------------------------------------------------
 #  Set Up Logging
 # ------------------------------------------------------------------------------
 log_file <- here("question_1_sdtm", "01_create_ds_domain.log")
@@ -31,18 +43,6 @@ cat(paste0("  R version     : ", R.version.string, "\n"))
 cat(paste0("  sdtm.oak      : ", as.character(packageVersion("sdtm.oak")), "\n"))
 cat(paste0("  pharmaverseraw: ", as.character(packageVersion("pharmaverseraw")), "\n"))
 cat("================================================================================\n\n")
-
-
-
-# ------------------------------------------------------------------------------
-#  Load Packages
-# ------------------------------------------------------------------------------
-library(dplyr)
-library(stringr)
-library(lubridate)
-library(here)
-library(sdtm.oak)
-library(pharmaverseraw)
 
 
 

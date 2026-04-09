@@ -17,6 +17,18 @@
 
 
 # ------------------------------------------------------------------------------
+#  Load Packages
+# ------------------------------------------------------------------------------
+library(dplyr)
+library(stringr)
+library(lubridate)
+library(here)
+library(admiral)
+library(pharmaversesdtm)
+
+
+
+# ------------------------------------------------------------------------------
 #  Set Up Logging
 # ------------------------------------------------------------------------------
 log_file <- here("question_2_adam", "create_adsl.log")
@@ -32,18 +44,6 @@ cat(paste0("  R version     : ", R.version.string, "\n"))
 cat(paste0("  admiral      : ", as.character(packageVersion("admiral")), "\n"))
 cat(paste0("  pharmaversesdtm: ", as.character(packageVersion("pharmaversesdtm")), "\n"))
 cat("================================================================================\n\n")
-
-
-
-# ------------------------------------------------------------------------------
-#  Load Packages
-# ------------------------------------------------------------------------------
-library(dplyr)
-library(stringr)
-library(lubridate)
-library(here)
-library(admiral)
-library(pharmaversesdtm)
 
 
 
